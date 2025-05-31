@@ -6,7 +6,7 @@ const Button = (props) => {
       className={`h-10 px-6 font-semibold rounded-md ${props.variant} text-white`}
       type="submit"
     >
-      {props.text}
+      {props.children}
     </button>
   );
 };
@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-blue-600">
       <div className="flex gap-x-3">
-        <Button variant="bg-red-700" text="Login" />
-        <Button variant="bg-slate-700" text="LogOut"/>
-        <Button variant="bg-black" />
+        <Button variant="bg-red-700">Login</Button>
+        <Button variant="bg-slate-700">LogOut</Button>
+        <Button variant="bg-black">Register</Button>
       </div>
     </div>
   );
