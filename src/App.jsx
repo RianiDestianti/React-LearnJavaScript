@@ -4,7 +4,7 @@ class Button extends React.Component {
   render() {
     return (
       <button
-        className="h-10 px-6 font-semibold rounded-md bg-black text-white"
+        className="h-10 px-6 font-semibold rounded-md bg-slate  text-white"
         type="submit"
       >
         Buy now
@@ -24,14 +24,24 @@ function ButtonBlack(){
   )
 }
 
+const ButtonRed = () => {
+  return (
+    <button
+      className="h-10 px-6 font-semibold rounded-md bg-red-600 text-white"
+      type="submit"
+    >
+      Buy now
+    </button>
+  );
+};
+
 function App() {
   return (
-    <div className="flex justify-center bg-blue-600 min-h-screen items-center">
-      <div>
+    <div className="flex justify-center items-center min-h-screen bg-blue-600">
+      <div className="flex gap-x-3">
         <Button />
-        <Button />
-        <Button />
-        <ButtonBlack></ButtonBlack>
+        <ButtonBlack />
+        <ButtonRed />
       </div>
     </div>
   );
