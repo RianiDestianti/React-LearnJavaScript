@@ -13,6 +13,16 @@ class Button extends React.Component {
   }
 }
 
+function ButtonBlack(){
+  return(
+    <button
+        className="h-10 px-6 font-semibold rounded-md bg-black text-white"
+        type="submit"
+      >
+        Buy now
+      </button>
+  )
+}
 
 function App() {
   return (
@@ -21,6 +31,7 @@ function App() {
         <Button />
         <Button />
         <Button />
+        <ButtonBlack></ButtonBlack>
       </div>
     </div>
   );
