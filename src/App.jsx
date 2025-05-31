@@ -1,33 +1,9 @@
 import React from "react";
 
-class Button extends React.Component {
-  render() {
-    return (
-      <button
-        className="h-10 px-6 font-semibold rounded-md bg-slate  text-white"
-        type="submit"
-      >
-        Buy now
-      </button>
-    );
-  }
-}
-
-function ButtonBlack(){
-  return(
-    <button
-        className="h-10 px-6 font-semibold rounded-md bg-black text-white"
-        type="submit"
-      >
-        Buy now
-      </button>
-  )
-}
-
-const ButtonRed = () => {
+const Button = (props) => {
   return (
     <button
-      className="h-10 px-6 font-semibold rounded-md bg-red-600 text-white"
+      className={`h-10 px-6 font-semibold rounded-md ${props.variant} text-white`}
       type="submit"
     >
       Buy now
@@ -39,9 +15,9 @@ function App() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-blue-600">
       <div className="flex gap-x-3">
-        <Button />
-        <ButtonBlack />
-        <ButtonRed />
+        <Button variant="bg-red-700" />
+        <Button variant="bg-slate-700" />
+        <Button variant="bg-black" />
       </div>
     </div>
   );
